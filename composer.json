@@ -1,5 +1,5 @@
 {
-    "name": "cboden/ratchet"
+    "name": "grandnain/ratchet"
   , "type": "library"
   , "description": "PHP WebSocket library"
   , "keywords": ["WebSockets", "Server", "Ratchet", "Sockets", "WebSocket"]
@@ -10,6 +10,11 @@
             "name": "Chris Boden"
           , "email": "cboden@gmail.com"
           , "role": "Developer"
+        },
+        {
+	    "name": "Jean Walrave",
+	    "email": "jean.walrave@epitech.eu",
+	    "role": "Developper"
         }
     ]
   , "support": {
@@ -23,9 +28,9 @@
         }
     }
   , "require": {
-        "php": ">=5.4.2"
+        "php": ">=7"
       , "ratchet/rfc6455": "^0.2"
-      , "react/socket": "^1.0 || ^0.8 || ^0.7 || ^0.6 || ^0.5"
+      , "react/socket": "^0.8.10"
       , "guzzlehttp/psr7": "^1.0"
       , "symfony/http-foundation": "^2.6|^3.0|^4.0"
       , "symfony/routing": "^2.6|^3.0|^4.0"
