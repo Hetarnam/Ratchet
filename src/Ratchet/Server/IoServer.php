@@ -85,10 +85,14 @@ class IoServer {
         $conn->decor->resourceId = (int)$conn->stream;
 
         $uri = $conn->getRemoteAddress();
+	
+	preg_match('/^(.*?):\/\/(.*?):(.*)/', $uri, $matches);
+	
         $conn->decor->remoteAddress = trim(
             parse_url((strpos($uri, '://') === false ? 'tcp://' : '') . $uri, PHP_URL_HOST),
             '[]'
         );
+	$conn->decor->remotePort = $matches[2];
 
         $this->app->onOpen($conn->decor);
 
